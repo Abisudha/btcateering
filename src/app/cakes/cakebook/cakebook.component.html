@@ -1,0 +1,84 @@
+<div class="container">
+
+    <div class="card card-body border-2 ms-5">
+
+    <div class="row">
+
+        <div class="col-2">Cake Name:</div>
+        <div class="col-4">
+            <select name="cakename" class="form-control" [(ngModel)]="cakename">
+                <option value="Butterscaramel">Butterscaramel</option>
+                <option value="Redvelvet">Redvelvet</option>
+                <option value="Chocolate">Chocolate</option>
+                <option value="Anniversary Cake">Anniversary Cake</option>
+                <option value="Blackforest">Blackforest</option>
+                <option value="Fruitsnuts Cake">Fruitsnuts Cake</option>
+                <option value="Barbie Cakes">Barbie Cakes</option>
+                <option value="Cartoon Cakes">Cartoon Cakes</option>
+                <option value="Pintana">Pintana Cakes</option>
+                <option value="Number Cakes">Number Cakes</option>
+              </select>
+        </div>
+    </div>
+
+        <div class="row mt-2">
+
+        <div class="col-2">select kgs:</div>
+        <div class="col-4">
+            <select name="cakename" class="form-control" [(ngModel)]="kgs">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+        </div>
+
+        </div>
+
+        <div class="row mt-2">
+        <div class="col-2">Add Egg:</div>
+        <div class="col-4">
+            <select name="cakename" class="form-control" [(ngModel)]="egg">
+                <option value="yes">Yes</option>
+                <option value="no">NO</option>
+              </select>
+        </div>
+    </div>
+
+
+    <div class="row mt-2">
+        <div class="col-2">Message on Cake:</div>
+        <div class="col-4">
+            <input type="text" name="msg" class="form-control" [(ngModel)]="cakemsg">  
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-2">Delivery date:</div>
+        <div class="col-4">
+            <input type="date" name="deliverydate"class="form-control" [(ngModel)]="deliverydate">  
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <div class="col-2">PhoneNumber:</div>
+        <div class="col-4">
+            <input type="mobile" name="mobile" class="form-control" [(ngModel)]="mobile">  
+        </div>
+    </div>
+
+<div class="row mt-2">
+
+    <div class="col-2"><button class="btn btn-primary" (click)="ordercake()">Send</button></div>
+    <div class="col-4"><button class="btn btn-warning" (click)="cleardata()">clear</button></div>
+
+
+
+</div>
+
+
+    </div>
+
+</div>

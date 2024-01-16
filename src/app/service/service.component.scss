@@ -1,0 +1,38 @@
+
+#sidehead{
+    font-family:'Inter', sans-serif;
+    font-size: large;
+    font-weight: 800;
+    text-align: center;
+    
+
+
+}
+
+#head{
+
+    font-family: 'Inter', sans-serif;
+    font-size: xx-large;
+    font-weight: 800;
+    background-color:burlywood;
+    padding:40px;
+    text-align: center;
+
+}
+
+.container{
+    width:100rem;
+    margin-left:-0.8rem;
+}
+
+// img {
+//     transform: scale(1.5);
+//     transform-origin: 40% 20%;
+//     cursor: zoom-in;
+
+//   } 
+  img:hover
+  {
+transform:scale(1.5);
+
+  }

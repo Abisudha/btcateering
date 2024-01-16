@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="text-center">Cake Orders </h1>
+
+
+    <table [cellPadding]="5" class="me-5">
+
+        <tr>
+
+            <th class="text-primary" id="bg">Cake Name</th>
+            <th class="text-primary" id="bg">kgs</th>
+            <th class="text-primary" id="bg">Egg</th>
+            <th class="text-primary" id="bg">Cake Message</th>
+            <th class="text-primary" id="bg">Delivery date</th>
+            <th class="text-primary" id="bg">Mobile</th>
+        </tr>
+
+        <tr *ngFor="let cakeorder of cakeorders">
+
+
+            <td>{{cakeorder.cakename}}</td>
+            <td>{{cakeorder.kgs}}</td>
+            <td>{{cakeorder.egg}}</td>
+            <td>{{cakeorder.cakemsg}}</td>
+            <td>{{cakeorder.deliverydate}}</td>
+            <td>{{cakeorder.mobile}}</td>
+       
+        </tr>
+
+    </table>

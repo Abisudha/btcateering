@@ -1,0 +1,99 @@
+<div class="container">
+  <body>
+  <img src="../../assets/images/order.jpg" width="100%">
+
+  <h1 class="text-center">Order now!</h1>
+
+  <form class="mt-5" id="form">
+    <div class="div">Name:</div>
+    <div>
+      <mat-form-field>
+        <input matInput name="name" [(ngModel)]="name">
+      </mat-form-field>
+    </div>
+
+    <div class="div">Mobile No:</div>
+    <div>
+      <mat-form-field>
+        <input matInput name="mobile" [(ngModel)]="mobile">
+      </mat-form-field>
+    </div>
+
+    <div class="div">Email:</div>
+    <div>
+      <mat-form-field>
+        <input matInput name="email" [(ngModel)]="email">
+      </mat-form-field>
+    </div>
+
+    <div class="div">Event Date:</div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" name="date" [(ngModel)]="date">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <div class="div">Event Place:</div>
+    <div>
+      <mat-form-field>
+        <input matInput name="place" [(ngModel)]="place">
+      </mat-form-field>
+    </div>
+
+    <div class="div">Type of Catering:</div>
+
+    <div>
+      <mat-form-field >
+        <mat-select name="cateing" [(ngModel)]="catering">
+          <mat-option value="wedding" >Wedding Caterers</mat-option>
+          <mat-option value="engagement" >Engagement</mat-option>
+          <mat-option value="puberty" >Puberty Function</mat-option>
+          <mat-option value="birthday" >Birthday Party</mat-option>
+          <mat-option value="babyshower" >Baby Shower</mat-option>
+          <mat-option value="housewarming" >House Warming</mat-option>
+          <mat-option value="corporate">Corporate Events</mat-option>
+          <mat-option value="industrial" >Industrial Catering</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+
+    <div class="div">Food type:</div>
+
+    <div>
+      <mat-form-field>
+        <mat-select  name="foodtype" [(ngModel)]="foodtype">
+          <mat-option value="vegetarian"name="vegetarian" >Vegetarian</mat-option>
+          <mat-option value="nonvegetarian" name="nonvegetarian" >Non Vegetarian</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="div">Menu Category:</div>
+    <div>
+      <section class="example-section "  >
+        <mat-checkbox class="example-margin " name="morningmeu" [(ngModel)]="menu.morningmenu"  >Morning Menu</mat-checkbox>
+        <mat-checkbox class="example-margin " name="luchmenu" [(ngModel)]="menu.lunchmenu">Lunch Menu</mat-checkbox>
+        <mat-checkbox class="example-margin " name="dinnermenu" [(ngModel)]="menu.dinnermenu">Dinner Menu</mat-checkbox>
+      </section>
+    </div>
+    <div class="div">Guest Count:</div>
+    <div>
+      <mat-form-field>
+        <input matInput name="guestcount" [(ngModel)]="guestcount">
+      </mat-form-field>
+    </div>
+    <div class="div">Event Budget:</div>
+    <div>
+      <mat-form-field>
+        <input matInput name="budget" [(ngModel)]="budget">
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="warn" (click)="orderregister()">Send</button> 
+      <button mat-raised-button color="primary" class="ms-2" (click)="cleardata()">clear</button>
+    </div>
+  </form>
+  </body>
+
+</div>

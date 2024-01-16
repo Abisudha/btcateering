@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-black p-5  ">
+  <div class="col"><div class="text-white" id="head">Taste & Best Cateering Service</div></div>
+
+  <!-- Home -->
+
+  <a routerLink="/home"><button mat-button >Home
+
+    </button></a>
+
+  <!-- Aboutus -->
+
+  <a routerLink="/about-us"><button mat-button>AboutUs</button>
+
+  </a>
+
+  <!-- Service -->
+
+  <a routerLink="/service"><button mat-button>Services</button>
+  </a>
+
+
+
+
+  <!-- Menu -->
+
+  <button mat-button [matMenuTriggerFor]="belowMenu">
+    Menu</button>
+  <mat-menu #belowMenu="matMenu">
+
+    <a routerLink="/breakfast"><button mat-menu-item>
+      Breakfast</button></a>
+
+      <a routerLink="/lunch"><button mat-menu-item>
+      Lunch</button></a>
+
+      <a routerLink="/dinner"><button mat-menu-item>
+      Dinner</button></a>
+
+      <a routerLink="/nonveg"> <button mat-menu-item>
+      Nonveg</button></a>
+
+      <a routerLink="/cake"> <button mat-menu-item>
+        Cakes</button></a>
+
+  </mat-menu>
+
+
+
+  <a routerLink="/order"><button mat-button>Order
+  </button></a>
+
+  <a routerLink="/contact-us"><button mat-button>Contact Us
+  </button></a>
+
+  <a routerLink="/profile"><button mat-button>My Account
+  </button></a>
+
+  <a routerLink="/logout"><button mat-button>LogOut
+   
+  </button></a>
+
+
+
+</nav>

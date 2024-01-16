@@ -1,0 +1,107 @@
+<div class="container">
+    <!-- <h2 class="mt-4">Stock details</h2>
+    <div class="row mt-4">
+        <div class="col">Product ID</div>
+        <div class="col">Product Name</div>
+        <div class="col">Price</div>
+        <div class="col">Count</div>
+        <div class="col">Total</div>
+        <div class="col">stock</div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col">Actions</div>
+    </div>
+    <div class="row mt-4">
+        <div class="col"><input type="text"  name="pid" class="form-control"  [(ngModel)]="pid" Readonly/>
+        </div>
+        <div class="col"><select name="productname" class="form-control" [(ngModel)]="productname" (click)="viewid()">
+            <option value="Rice">Rice</option>
+            <option value="oil">Oil</option>
+            <option value="Tomato">Tomato</option>
+            <option value="Potato">Potato</option>
+            <option value="Turmeric">Chilipowder</option>
+            <option value="Masala">Turmeric</option>
+          </select></div>
+        <div class="col"><input type="text"  name="pprice" class="form-control"   [(ngModel)]="pprice" readonly ></div>
+        <div class="col"><input type="text"  name="pcount" class="form-control"  [(ngModel)]="count" (keyup)="totalvalue()" /></div>
+        <div class="col"><input type="text"  name="ptotal" class="form-control" [(ngModel)]="ptotal" readonly/></div>
+        <div class="col"><input type="text"  name="stock" class="form-control"  [(ngModel)]="stock" readonly/></div>
+        <div class="col"><button type="button" class="btn btn-success" (click)="inwarditems()">Inward</button></div>
+       
+        <div class="col"><button type="button" class="btn btn-success">Outward</button></div>
+    
+
+    </div> -->
+    <h1>Add products</h1>
+
+    <div class="row mt-4">
+        <div class="col">Product ID</div>
+        <div class="col">Product Name</div>
+        <div class="col">Price</div>
+        <div class="col">Actions</div>
+        <div class="col"></div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col"><input type="text" name="pid" class="form-control" [(ngModel)]="pid" /></div>
+            <div class="col"><input type="text" name="productname" class="form-control" [(ngModel)]="productname"/></div>
+                <div class="col"><input type="text" name="price" class="form-control"  [(ngModel)]="price"/></div>
+                    <div class="col">
+                        <div class="col"><button type="button" class="btn btn-success" (click)="Productadd()">Add</button></div>
+                    </div>
+
+                    <div class="col">
+                        <div class="col"><button type="button" class="btn btn-success" (click)="cleardata()">clear</button></div>
+                    </div>
+                    
+                    </div>
+
+                    <hr>
+
+
+                   <h1>Stock details</h1>
+
+                    <table [cellPadding]="6"  [cellSpacing]="5" class="me-5">
+
+                        <tr>
+                
+                            <th class="text-primary text-center" id="bg">Product ID</th>
+                            <th class="text-primary text-center" id="bg">Product Name</th>
+                            <th class="text-primary text-center" id="bg">Price</th>
+                            <th class="text-primary text-center" id="bg">Qty</th>
+                            <th class="text-primary text-center" id="bg">Unit</th>
+                            <th class="text-primary text-center" id="bg">Inward</th>
+                            <th class="text-primary text-center" id="bg">Outward</th>
+                            <th class="text-primary text-center" id="bg">Current Stock</th>
+                            <th class="text-primary text-center" id="bg">Unit</th>
+                            
+                           
+                        </tr>
+                
+                        <tr *ngFor="let addproduct of addproducts">
+                
+                
+                            <td>{{addproduct.pid}}</td>
+                            <td>{{addproduct.productname}}</td>
+                            <td>{{addproduct.price}}</td>
+                            <td><input type="text" class="form-control" [(ngModel)]="qty"></td>
+                            <td>
+                                <select>
+                                    <option>Kgs</option>
+                                    <option>Ltr</option>
+                                    <option>pack</option>
+                                </select>
+                            </td>
+                            <td><button class="btn btn-success" >Inward</button></td>
+                            <td><button class="btn btn-danger" >Outward</button></td>
+                            <td> </td>
+                            <td>
+                               
+                            </td>
+                            
+                
+                        </tr>
+                
+                    </table>
+
+                </div>

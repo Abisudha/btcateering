@@ -1,0 +1,37 @@
+<!-- <div class="container">
+    <div class="row" *ngIf="sessionStore.getItem('usertype') == 'user' || sessionStore.getItem('usertype') == 'admin'">
+      <app-header *ngIf="sessionStore.getItem('usertype') == 'user'"></app-header> 
+      <app-adminheader *ngIf="sessionStore.getItem('usertype') == 'admin'"></app-adminheader> 
+
+        
+        <app-header></app-header>
+    </div>
+
+    <div class="row">
+        <router-outlet></router-outlet>
+    </div>
+
+    <div class="row" *ngIf="sessionStore.getItem('username') || ''">
+        <app-footer></app-footer>
+    </div>
+</div> -->
+
+
+
+<div class="container">
+    <div class="row" *ngIf="userheader">
+        <app-header></app-header>
+
+    </div>
+    <div class="row" *ngIf="adminheader">
+        <app-adminheader></app-adminheader>
+    </div>
+    <div class="row">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="row"  *ngIf="userheader">
+        <app-footer></app-footer>
+    </div>
+    
+
+</div>

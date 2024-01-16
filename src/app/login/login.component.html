@@ -1,0 +1,46 @@
+<body class="bodybg">
+	<div class="container ">
+		<div class="row ">
+
+			<div class="col">
+				<div class="card card-body mt-5 ms-5 bg-transparent border-white" style="border-radius:10%">
+					<div class="card-title text-white text-center">Login</div>
+					<div class="ms-5">
+						<mat-radio-group aria-label="Select an option" [(ngModel)]="usertype" [ngModelOptions]="{standalone: true}">
+							<mat-radio-button name="user" value="user">User</mat-radio-button>
+							<mat-radio-button name="admin" value="admin">Admin</mat-radio-button>
+						</mat-radio-group>
+					</div>
+					<div class="mt-2 ms-4">
+						<mat-form-field>
+							<input matInput placeholder="Username.." name="username" [(ngModel)]="username">
+						</mat-form-field>
+					</div>
+					<div class="mt-2 ms-4">
+						<div>
+							<mat-form-field>
+								<input matInput placeholder="Password.." name="password"  [(ngModel)]="password">
+							</mat-form-field>
+						</div>
+						<div>
+							<button mat-raised-button color="primary" (click)="validateLogin()">Login</button>
+							<button mat-flat-button color="warn" class="ms-2" (click)="resetdata()">Clear</button>
+						</div>
+						<div class="mt-3 text-center text-white">If you don't have an account ? <a
+								routerLink="/sign-up">Signup</a></div>
+					</div>
+
+				</div>
+			</div>
+				<div class="col"></div>
+				<div class="col"></div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+</body>
+<!-- style="width:90%; height:90%; border-radius:10%" -->

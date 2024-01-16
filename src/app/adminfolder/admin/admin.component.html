@@ -1,0 +1,90 @@
+<div class="container">
+    <h1 class="text-center">Customer Enquiry </h1>
+
+
+    <table [cellPadding]="5" class="me-5">
+
+        <tr>
+
+            <th class="text-primary" id="bg">Customer Name</th>
+            <th class="text-primary" id="bg">Mobile No</th>
+            <th class="text-primary" id="bg">Email</th>
+            <th class="text-primary" id="bg">Event Date</th>
+            <th class="text-primary" id="bg">Event Place</th>
+            <th class="text-primary" id="bg">Type of Catering</th>
+            <th class="text-primary" id="bg">Food Type</th>
+            <th class="text-primary" id="bg">Menu Category</th>
+            <th class="text-primary" id="bg">Guest Count</th>
+            <th class="text-primary" id="bg">Budget</th>
+        </tr>
+
+        <tr *ngFor="let order of orders">
+
+
+            <td>{{order.name}}</td>
+            <td>{{order.mobile}}</td>
+            <td>{{order.email}}</td>
+            <td>{{order.date}}</td>
+            <td>{{order.place}}</td>
+            <td>{{order.catering}}</td>
+            <td>{{order.foodtype}}</td>
+            <td>Dinner:{{order.menu.dinnermenu}} Lunch:{{order.menu.lunchmenu}} morningmenu:{{order.menu.morningmenu}}</td>
+            <td>{{order.guestcount}}</td>
+            <td>{{order.budget}}</td>
+
+        </tr>
+
+    </table>
+
+
+
+
+
+
+
+
+    <!-- 
+<div class="container">
+    <h1 class="text-center">Customer Enquiry </h1>
+
+
+    <table>
+    
+
+        <tr>
+
+        <div class="col text-center"><label>Customer Name</label></div>
+        <div class="col text-center"><label>Mobile No</label></div>
+        <div class="col ms-5 text-center"><label>Email</label></div>
+        <div class="col ms-5 text-center"><label>Event Date</label></div>
+        <div class="col ms-5 text-center"><label>Event Place</label></div>
+        <div class="col ms-5 text-center"><label>Type of Catering</label></div>
+        <div class="col ms-5 text-center"><label>Food Type</label></div>
+        <div class="col text-center"><label>Menu Category</label></div>
+        <div class="col text-center"><label>Guest Count</label></div>
+        <div class="col text-center"><label>Budget</label></div>
+        </tr>
+    
+    <hr class="border-bottom border-1 border-dark">
+
+    <div class="row" *ngFor="let order of orders">
+
+        <div class="col text-center">{{order.name}}</div>
+        <div class="col text-center">{{order.mobile}}</div>
+        <div class="col text-center">{{order.email}}</div>
+        <div class="col text-center">{{order.date}}</div>
+        <div class="col text-center">{{order.place}}</div>
+        <div class="col text-center">{{order.catering}}</div>
+        <div class="col text-center">{{order.foodtype}}</div>
+        <div class="col text-center">{{order.menu}}</div>
+        <div class="col text-center">{{order.guestcount}}</div>
+        <div class="col text-center">{{order.budget}}</div>
+  
+        
+
+    </div>
+
+ 
+    </table>
+
+</div>  -->

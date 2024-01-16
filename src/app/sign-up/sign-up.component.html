@@ -1,0 +1,28 @@
+
+<body class="body">
+<div class="container">
+	<div class="row">
+		<div class="col"></div>
+		
+		<div class="col">
+			<div class="card card-body  bg-transparent border-white mt-1" style="width:90%; height:99%; border-radius:10%">
+				<div class="card-title text-primary text-center text-white">Register</div>
+				<mat-radio-group aria-label="Select an option" class="ms-5" [(ngModel)]="usertype" [ngModelOptions]="{standalone: true}">
+					<mat-radio-button value="user" name="user">User</mat-radio-button>
+					<mat-radio-button value="admin" name="admin">Admin</mat-radio-button>
+				  </mat-radio-group>
+				  
+				<input type="text" name="username" [(ngModel)]="username" placeholder="Username" class="form-control"> <br>
+                <input type="number" name="mobilenumber" [(ngModel)]="mobilenumber" placeholder="MobileNumber"  class="form-control"><br>
+				<input type="password" name="password" [(ngModel)]="password" placeholder="password"  class="form-control"><br>
+                <input type="password" name="confirmpassword" [(ngModel)]="confirmpassword" placeholder="Confirm password"  class="form-control"><br>
+                <button class="btn btn-success" (click)="registeruser()">Register</button> <br>
+				<button class="btn btn-danger" (click)=" resetForm()">Reset</button>
+                
+			</div>
+		</div>
+		<div class="col"></div>
+	
+	</div>
+</div>
+</body>

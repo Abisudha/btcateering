@@ -1,0 +1,25 @@
+<div class="container">
+
+    <h1 class="text-center">Customer Contact details</h1>
+    <table [cellPadding]="5" class="mt-3">
+        <tr>
+        <th id="bg">Customer Name</th>
+        <th id="bg">number</th>
+        <th id="bg">Email id</th>
+        <th id="bg">Queries</th>
+        </tr>
+    
+
+
+    <tr *ngFor="let contact of contact">
+
+
+        <td>{{contact.name}}</td>
+        <td>{{contact.mobile}} </td>
+        <td>{{contact.email}} </td>
+        <td>{{contact.querry}}</td>
+
+    </tr>
+    </table>
+
+</div>
